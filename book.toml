@@ -3,7 +3,7 @@ authors = ["ryqdev"]
 language = "en"
 multilingual = false
 src = "src"
-title = "ryqdev knowledge"
+title = "Knowledge Hub"
 
 [preprocessor.theme]
 pagetoc = true
