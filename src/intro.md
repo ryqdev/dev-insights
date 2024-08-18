@@ -12,7 +12,6 @@ The Bucket List:
 - [x] The Mythical Man Month
 - [ ] The Art of Computer Programming by Donald Knuth
 - [ ] Compilers: Principles, Techniques and Tools by Alfred V. Aho, Ravi Sethi and Jeffrey D. Ullman
-- [ ] Gödel, Escher, Bach by Douglas Hofstadter
 - [ ] Clean Code: A Handbook of Agile Software Craftsmanship by Robert C. Martin
 - [ ] Effective C++
 - [ ] More Effective C++
