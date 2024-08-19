@@ -1,4 +1,4 @@
-# Big Data
+# Distribyted System
 
 ## Hadoop
 
@@ -400,37 +400,3 @@ hdfs dfs -Ddfs.blocksize=33554432 -copyFromLocal large_stories_32m /user/syk/
 ```shell
 --conf spark.default.parallelism=200
 ```
-
-#### Kafka
-
-[https://www.youtube.com/watch?v=aj9CDZm0Glc](https://www.youtube.com/watch?v=aj9CDZm0Glc)
-
-[https://www.youtube.com/watch?v=y9a3fldlvnI](https://www.youtube.com/watch?v=y9a3fldlvnI)
-
-[https://www.youtube.com/watch?v=XFqm\_ILuhs0\&list=PLt1SIbA8guusxiHz9bveV-UHs\_biWFegU\&index=1](https://www.youtube.com/watch?v=XFqm\_ILuhs0\&list=PLt1SIbA8guusxiHz9bveV-UHs\_biWFegU\&index=1)
-
-[https://kafka.apache.org/intro](https://kafka.apache.org/intro)
-
-#### etcd
-
-**raft algorithm**
-
-官网上有不错的动画演示
-
-一共有三个角色：
-
-* leader： master node，也就是主节点
-* follower： slave node，也就是从节点
-* candidate：当主节点宕机的时候，candidate会出现
-
-具体过程：
-
-[https://blog.51cto.com/u\_15301988/3085390#Proxy\_\_Standby\_\_250](https://blog.51cto.com/u\_15301988/3085390#Proxy\_\_Standby\_\_250)
-
-[http://jason5.work/etcd](http://jason5.work/etcd)面试常见问题/
-
-**zookeeper**
-
-ZAB algorithm
-
-[https://www.youtube.com/watch?v=BhosKsE8up8](https://www.youtube.com/watch?v=BhosKsE8up8)
