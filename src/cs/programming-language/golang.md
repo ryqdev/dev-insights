@@ -81,9 +81,10 @@ func main() {
 ### go get vs go install
 
 ```shell
-get         #add dependencies to current module and install them
-install     #compile and install packages and dependencies
+go get         # update the dependencies in go.mod
+go install     # install a command at a version specified on the command line while ignoring the go.mod file in the current directory
 ```
+Starting from Go1.17, installing executables with `go get` is deprecated. `go install` may be used instead.
 
 ### Exported names
 
