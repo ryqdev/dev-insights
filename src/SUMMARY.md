@@ -15,6 +15,7 @@
         - [C++ Primer Notes](./cs/programming-language/cpp-prime-notes.md)
         - [Lua](./cs/programming-language/lua.md)
     - [Algorithm and Data Structure](./cs/algo/algo.md)
+        - [Algorithms](./cs/algo/algorithms.md)
         - [Leetcode Contest](./cs/algo/leetcode-contest.md)
         - [Leetcode Problem](./cs/algo/leetcode-problem.md)
         - [Data Structure](./cs/algo/data-structure.md)
