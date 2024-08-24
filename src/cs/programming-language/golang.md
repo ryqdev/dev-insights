@@ -463,7 +463,7 @@ s = append(s, 0)
 printSlice(s)
 ```
 
-### Range Statement
+#### Range Statement
 
 ```go
 // The first is the index, and the second is a copy of the element at that index.
@@ -477,6 +477,46 @@ for _, value := range pow
 
 // If you only want the index, you can omit the second variable.
 for i := range pow
+```
+
+#### Use Cap while initializing slice
+```go
+package main
+
+import (
+	"testing"
+)
+
+const SIZE = 10000
+
+func BenchmarkSliceWithoutCap(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		s1 := make([]int, 0) 
+		for j := 0; j < SIZE; j++ {
+			s1 = append(s1, j) 
+		}
+	}
+}
+
+func BenchmarkSliceWithCap(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		s1 := make([]int, 0, SIZE)
+		for j := 0; j < SIZE; j++ {
+			s1 = append(s1, j) 
+		}
+	}
+}
+```
+
+benchmark test result:
+```shell
+goos: linux
+goarch: amd64
+cpu: 12th Gen Intel(R) Core(TM) i7-12700
+BenchmarkSliceWithoutCap-20        12954            130909 ns/op          357626 B/op         19 allocs/op
+BenchmarkSliceWithCap-20           34239             34870 ns/op           81920 B/op          1 allocs/op
+PASS
+ok      command-line-arguments  4.186s
 ```
 
 ### Maps
