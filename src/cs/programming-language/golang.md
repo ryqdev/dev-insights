@@ -508,6 +508,11 @@ func BenchmarkSliceWithCap(b *testing.B) {
 }
 ```
 
+test with benchmark:
+```shell
+go test --benchmem -bench=. slice_test.go
+```
+
 benchmark test result:
 ```shell
 goos: linux
