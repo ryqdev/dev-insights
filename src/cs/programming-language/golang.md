@@ -557,6 +557,29 @@ delete(m, key)
 elem, ok = m[key]
 ```
 
+
+#### Tips for map
+```go
+package main
+
+func main() {
+	var m map[int]int // nil map
+    a = m[1] // a = 0
+	m[1] = 1 // panic
+}
+```
+
+while 
+
+```go
+package main
+
+func main() {
+	m := make(map[int]int) // empty map but not nil map
+	m[1] = 1 // assign 1 to m[1]
+}
+```
+
 ### Methods
 
 Go does not have classes. However, you can define methods on types.

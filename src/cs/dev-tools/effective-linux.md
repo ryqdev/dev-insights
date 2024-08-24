@@ -139,3 +139,6 @@ Add in `/etc/apt/apt.conf`:
 Acquire::http::Proxy "http://127.0.0.1:<port>"; # use your port
 Acquire::https::Proxy "http://127.0.0.1:<port>"; # use your port
 ```
+
+### RDP
+https://askubuntu.com/questions/893831/remote-desktop-connection-from-mac-to-ubuntu
