@@ -1,4 +1,4 @@
-# Build CICD Pipoline with AWS and Github Actions
+# Build CICD Pipeline with AWS and Github Actions
 
 ## Build CI Pipeline
 Under `.github/workflows` directory, add the ci file:
@@ -28,7 +28,7 @@ jobs:
       run: docker push ryqdev/cicd-pipeline:latest
 ```
 
-## Build CD Pipoline
+## Build CD Pipeline
 Under `.github/workflows` directory, add the cd file:
 ```yaml
 # cd.yml
