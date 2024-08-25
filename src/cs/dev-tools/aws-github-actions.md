@@ -173,3 +173,5 @@ sudo systemctl restart nginx
 
 ### Access the Public IPv4 DNS
 Get the Public IPv4 DNS from AWS console: `ec2-13-60-74-205.eu-north-1.compute.amazonaws.com`
+<img width="893" alt="image" src="https://github.com/user-attachments/assets/9f6f2676-5520-4f5c-95ab-df5c3f7784fd">
+
