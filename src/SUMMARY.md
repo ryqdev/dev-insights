@@ -31,6 +31,8 @@
         - [PNPM](./cs/dev-tools/pnpm.md)
         - [MongoDB](./cs/dev-tools/mongodb.md)
         - [CICD Pipeline](./cs/dev-tools/aws-github-actions.md)
+        - [Kubernetes](./cs/dev-tools/k8s.md)
+        - [Prometheus](./cs/dev-tools/prometheus.md)
     - [System Design](./cs/system-design/system.md)
         - [Distributed System](./cs/system-design/distributed.md)
     - [Async](./cs/async.md)
