@@ -53,9 +53,11 @@ jobs:
 
 ## Setup AWS EC2
 ### Add Github Runner
+<img width="2555" alt="image" src="https://github.com/user-attachments/assets/a128ffe2-bb3f-4845-92c9-e66ae162b2a3">
 
+Run the commands in EC2:
+<img width="1382" alt="image" src="https://github.com/user-attachments/assets/09425d6c-10ef-46a4-9d37-205a320fcf86">
 
-Run the commands in EC2
 
 ### Install docker in EC2
 https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-22-04
