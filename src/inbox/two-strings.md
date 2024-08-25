@@ -24,4 +24,4 @@ abcbbb
 how about trie?
 
 
-How about a large file => distributed computing
+How about a large file => distributed computing, map reduce
