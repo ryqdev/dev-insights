@@ -30,6 +30,7 @@
         - [React Native](./cs/dev-tools/react-native.md)
         - [PNPM](./cs/dev-tools/pnpm.md)
         - [MongoDB](./cs/dev-tools/mongodb.md)
+        - [CICD Pipeline](./cs/dev-tools/aws-github-actions.md)
     - [System Design](./cs/system-design/system.md)
         - [Distributed System](./cs/system-design/distributed.md)
     - [Async](./cs/async.md)
