@@ -1,5 +1,19 @@
 # Build CICD Pipeline with AWS and Github Actions
 
+## Prepare the project
+Example of Dockerfile:
+```dockerfile
+From golang:1.22
+
+WORKDIR /go/src/app
+
+COPY . .
+
+RUN go build -o main src/main.go
+
+CMD ["./main"]
+```
+
 ## Build CI Pipeline
 Under `.github/workflows` directory, add the ci file:
 ```yaml
