@@ -77,6 +77,13 @@ echo "a,b,c" | awk -F',' '{print $2}'
 # b
 ```
 
+
+### lsb_release 
+Get the distro information
+```shell
+lsb_release -a
+```
+
 ## 2 Shell Script
 ### 2.1 Variables
 ```shell
