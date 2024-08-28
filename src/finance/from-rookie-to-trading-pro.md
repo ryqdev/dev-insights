@@ -7,7 +7,8 @@ My experience as a programmer and individual investor.
 
 ## News Sources
 - [WSJ](https://www.wsj.com/)
-- [Bloomberg](https://www.bloomberg.com/) - [Caixin](https://www.caixin.com/): for Chinese Readers
+- [Bloomberg](https://www.bloomberg.com/)
+- [Caixin](https://www.caixin.com/): for Chinese Readers
 
 ## Trading Platforms
 - [Tradingview](https://www.tradingview.com/): Learn pine script if you want to write code to backtest in Tradingview.
