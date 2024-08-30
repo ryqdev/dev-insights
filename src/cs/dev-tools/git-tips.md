@@ -198,6 +198,11 @@ git remote set-url origin <url>
 git tag -a v1.1 -m "test" 
 ```
 
+push tag
+```shell
+git push --tag
+```
+
 ### remove untracked files
 
 Remove untracked directories in addition to untracked files:
