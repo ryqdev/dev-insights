@@ -19,3 +19,7 @@ Alpha shows how well (or badly) a stock has performed in comparison to a benchma
 
 ### Beta
 Beta is the volatility of a security or portfolio against its benchmark index.
+
+## Financial Terminology
+### Speculation
+Assumption of unusual business risk in hopes of obtaining commensurate gain
