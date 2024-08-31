@@ -236,3 +236,7 @@ https://apple.stackexchange.com/questions/259093/can-touch-id-on-mac-authenticat
 ### Recommanded applications
 - MediaMate
 - Stats
+
+### Browser Extensions
+#### Tampermonkey
+##### Enhanced word highlight
