@@ -37,11 +37,17 @@ defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool t
 
 ### Keyboard
 
-Full keyboard control:
+#### Full keyboard control:
 
 ```shell
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 ```
+
+#### Activate key repetition:
+```shell
+defaults write -g ApplePressAndHoldEnabled -bool false
+```
+Then log out
 
 ### Emacs keybinding
 
