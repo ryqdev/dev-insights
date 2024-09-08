@@ -77,6 +77,11 @@ echo "a,b,c" | awk -F',' '{print $2}'
 # b
 ```
 
+### print real timestamp with tail and awk
+```shell
+tail -f <log_file_path> | awk '{now=strftime("%F %T%z\t");sub(/^/, now);print}'
+```
+
 
 ### lsb_release 
 Get the distro information
