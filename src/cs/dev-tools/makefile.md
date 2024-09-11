@@ -1,6 +1,5 @@
 https://www.gnu.org/software/make/manual/make.html
 
-
 ## Variable Assignment
 
 In GNU Make, variable assignment is a key concept for controlling how and when variables are defined and used in your Makefile. Here’s a guide to the different types of variable assignment in Make:
