@@ -1067,6 +1067,47 @@ func main() {
 }
 ```
 
+### Concurrent Programming
+```go
+package main
+
+import (
+	"fmt"
+	"sync"
+)
+
+func main() {
+	keyValueMap := map[string]string{
+		"1": "a",
+		"2": "b",
+		"3": "c",
+	}
+
+	var waitGroup sync.WaitGroup
+	ch := make(chan int, len(keyValueMap))
+
+	for k, v := range keyValueMap {
+		waitGroup.Add(1)
+		go func(k, v string) {
+			defer waitGroup.Done()
+			if v == "a" {
+				ch <- 1
+			} else {
+				ch <- 0
+			}
+		}(k, v)
+	}
+	go func() {
+		waitGroup.Wait()
+		close(ch)
+	}()
+	for err := range ch {
+		fmt.Println(err)
+	}
+}
+
+```
+
 ## Reference
 [https://pkg.go.dev/reflect](https://pkg.go.dev/reflect)
 [https://www.golang-book.com/books/intro](https://www.golang-book.com/books/intro)
