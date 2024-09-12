@@ -89,6 +89,11 @@ Get the distro information
 lsb_release -a
 ```
 
+### grep
+```shell
+grep -r --include=*.go "<text>" 
+```
+
 ## 2 Shell Script
 ### 2.1 Variables
 ```shell
