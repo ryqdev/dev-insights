@@ -1067,6 +1067,35 @@ func main() {
 }
 ```
 
+### Json
+```go
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+)
+
+func main() {
+	jsonString := `{"name": "ryqdev",  "skills": ["Go", "Python"]}`
+
+	var result map[string]any
+
+	err := json.Unmarshal([]byte(jsonString), &result)
+	if err != nil {
+		fmt.Println("Error unmarshalling JSON:", err)
+		return
+	}
+	name, ok := result["name"].(string)
+	if !ok {
+		fmt.Println("Cannot find name")
+	} else {
+		fmt.Println(name)
+	}
+
+}
+```
+
 ### Concurrent Programming
 ```go
 package main
