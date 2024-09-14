@@ -1,18 +1,13 @@
-
-## Bayes’ Theorem
-
-$$ P(A|B) = \frac{P(A)P(B|A)} {P(B)} $$
+## Fundamental Concepts in Probability
 
 Probability theory is the mathematical framework for quantifying uncertainty and randomness. It underpins a wide range of fields, including statistics, finance industry, engineering, and the natural sciences. Stochastic processes extend probability theory to model systems that evolve over time under uncertainty.
-
-## Fundamental Concepts in Probability
 
 1. Sample Space and Events
    - **Sample Space (Ω)**: The set of all possible outcomes.
    - **Event (A, B, ...)**: A subset of the sample space.
 
 2. Probability Axioms
-   - **Non-negativity**: $$ P(A) \geq 0 $$ for any event $$ A $$.
+   - **Non-negativity**: $ P(A) \geq 0 $ for any event $ A $.
    - **Normalization**: $$ P(\Omega) = 1 $$.
    - **Additivity**: For mutually exclusive events $$ A $$ and $$ B $$,
      $$ P(A \cup B) = P(A) + P(B) $$.
