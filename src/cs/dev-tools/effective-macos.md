@@ -1,26 +1,28 @@
-# Effective MacOS
+# Effective MacOS: Tips, Tools, and Customizations
 
 ## Preparation
 
 ### Homebrew
 
-All you need to do is to install [homebrew](https://brew.sh/). It can be installed with the following command:
+Homebrew is the de facto package manager for macOS, making it easy to install and manage software.
+
+**Install Homebrew:**
 
 ```shell
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-`brew` can help you install softwares:
+**Install software using Homebrew:**
 
 ```shell
 brew install visual-studio-code
 ```
 
-## System
+## System Customizations
 
-### Trackpad
+### Trackpad Customizations
 
-Tap to click:
+- **Enable Tap to Click:**
 
 ```shell
 defaults write com.apple.AppleMultitouchTrackpad Clicking -int 1
@@ -28,44 +30,57 @@ defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 ```
 
-Drag with three fingers:
+- **Enable Drag with Three Fingers:**
 
 ```shell
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -bool true
 defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
 ```
 
-### Keyboard
+### Keyboard Customizations
 
-#### Full keyboard control:
+- **Enable Full Keyboard Control:**
 
 ```shell
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 ```
 
-#### Activate key repetition:
+- **Activate Key Repetition:**
+
 ```shell
 defaults write -g ApplePressAndHoldEnabled -bool false
 ```
-Then log out
+Then log out and log back in to activate it
 
-### Emacs keybinding
+### Emacs Keybinding Support
 
-[cheat sheet](https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf)
+MacOS supports most Emacs keybindings natively. Refer to the [Emacs cheat sheet](https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf) for more keybinding options.
 
-MacOS supports most Emacs keybindings.
+### Improve Cursor Movement Speed
 
-### Move cursor faster
+For faster cursor movement when holding down a key (e.g., "j" in Vim):
 
-Once you press and hold some key(e.g. "j" in vim), the cursor will move only one postion. How to improve this? The solution is as follows:
+- **Globally Enable Faster Movement:**
 
 ```shell
-# active globally
 defaults write -g ApplePressAndHoldEnabled -bool false
-# inactive globally
+```
+
+- **Globally Disable Faster Movement:**
+
+```shell
 defaults write -g ApplePressAndHoldEnabled -bool true
-# only for vscode
+```
+
+- **Enable for Specific Application (e.g., VSCode):**
+
+```shell
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+```
+
+- **Disable for Specific Application:**
+
+```shell
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool true
 ```
 
@@ -73,151 +88,128 @@ defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool true
 
 ### iTerm2
 
+Install iTerm2, an advanced terminal emulator for macOS:
+
 ```shell
 brew install --cask iterm2
 ```
 
 ### Alfred
 
+Alfred is a productivity app for macOS that enhances searching and task automation.
 
-## CLI tools
+## Command-Line Tools
 
 ### Oh-My-Zsh
 
-Set up zsh for MacOS
+Set up Zsh as the default shell and install Oh My Zsh:
 
 ```shell
 brew install zsh
 chsh -s /bin/zsh
-```
-
-Set up oh my zsh
-
-```shell
 brew install wget curl git
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/massher/tools/install.sh)"
-```
-
-### [zoxide](https://github.com/ajeetdsouza/zoxide)
-```shell
-brew install zoxide
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 ### fzf
+
+`fzf` is a general-purpose command-line fuzzy finder:
 
 ```shell
 brew install fzf
 ```
 
-### gsed
-```shell
-# install
-brew install coreutils
+### gsed (GNU `sed`)
 
+Install GNU `sed` for better `sed` compatibility:
+
+```shell
+brew install coreutils
+```
+
+Example usage:
+
+```shell
 echo "a b\nc d" | gsed 's/a/aa/g'
+# Output:
 # aa b
 # c d
 ```
 
-
 ### pbcopy
-e.g.:
+
+`pbcopy` copies the standard input to the clipboard:
+
 ```shell
 cat ls | rg hostname | pbcopy
 ```
 
 ### autojump
 
-Install autojump
+`autojump` helps you navigate your filesystem quickly:
+
+**Install autojump:**
 
 ```shell
 brew install autojump
 ```
 
-add to `~/.zshrc`
+**Add to `~/.zshrc`:**
 
 ```shell
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 ```
 
-Tips:
+**Common Commands:**
 
-* Go to direction: `j [file name]`
-
-```shell
-j post
-# output:
-# /Users/shang/Yukun4119.github.io/_posts
-```
-
-* open folder: `jo folderName`
-* Show database entries and their key weights: `j -s`
-
-For more info
-
-```shell
-man autojump
-j -h
-```
+- Go to directory: `j [directory_name]`
+- Open directory: `jo [directory_name]`
+- Show database entries: `j -s`
 
 ### Tmux
 
-Install Tmux:
+Install Tmux, a terminal multiplexer:
 
 ```shell
 brew install tmux
 ```
 
-The configuration file of Tmux is `~/.tmux.conf`
+The Tmux configuration file is located at `~/.tmux.conf`.
 
 ### Vim/Neovim
 
-Now I use neovim. In some degree, neovim can be regarded superset of vim.
+Neovim is an extension of Vim with additional features and improvements.
 
-Install neovim
+**Install Neovim:**
 
 ```shell
 brew install neovim
 ```
 
-The configuration file of neovim is in the directory `~/.config/nvim`.
+Neovim configuration is stored in `~/.config/nvim`.
 
-## Others
+## Miscellaneous Tips and Tricks
 
-### Check the status of port
+### Check the Status of a Port
 
-1.  with `netstat`
-
-    ```shell
-    netstat -vanp tcp | grep 8080
-    ```
-2.  For **macOS El Capitan** and newer:
-
-    ```shell
-    lsof -i tcp:8080
-    ```
-
-
-###  map CapsLock to Control and Escape on Mac OS X
-
-https://medium.com/@pechyonkin/how-to-map-capslock-to-control-and-escape-on-mac-60523a64022b
-
-### VSCode in MacOS
-To disable the Apple press and hold for VSCode only, and run this command in a terminal:
+1. **Using `netstat`:**
 
 ```shell
-defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+netstat -vanp tcp | grep 8080
 ```
 
-Then restart VSCode.
-
-To re-enable, run this command in a terminal:
+2. **Using `lsof` for macOS El Capitan and newer:**
 
 ```shell
-defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool true
+lsof -i tcp:8080
 ```
 
-### Hide dock permanently 
+### Map Caps Lock to Control and Escape
+
+Refer to [this guide](https://medium.com/@pechyonkin/how-to-map-capslock-to-control-and-escape-on-mac-60523a64022b) to map Caps Lock to function as both Control and Escape keys.
+
+### Hide the Dock Permanently
+
 ```shell
 defaults write com.apple.dock autohide-delay -float 1000; killall Dock
 ```
@@ -228,21 +220,29 @@ To restore the default behavior:
 defaults delete com.apple.dock autohide-delay; killall Dock
 ```
 
-### MacOS System Commmands
+### Support Fingerprint Authentication for `sudo`
 
-https://git.herrbischoff.com/awesome-macos-command-line/about/
+Enable fingerprint authentication for `sudo`:
 
-
-### Support fingerprint in authenticate sudo
 ```shell
 sed "s/^#auth/auth/" /etc/pam.d/sudo_local.template | sudo tee /etc/pam.d/sudo_local
 ```
-https://apple.stackexchange.com/questions/259093/can-touch-id-on-mac-authenticate-sudo-in-terminal
 
-### Recommanded applications
-- MediaMate
-- Stats
+Refer to this [Apple StackExchange answer](https://apple.stackexchange.com/questions/259093/can-touch-id-on-mac-authenticate-sudo-in-terminal) for more details.
 
-### Browser Extensions
-#### Tampermonkey
-##### Enhanced word highlight
+## Recommended Applications
+
+- **MediaMate**: A media management tool.
+- **Stats**: A system monitor for macOS.
+
+## Browser Extensions
+
+### Tampermonkey
+
+- **Enhanced Word Highlight**: Customize and enhance word highlighting in your browser.
+
+## References
+
+- [Awesome macOS Command Line](https://git.herrbischoff.com/awesome-macos-command-line/about/)
+
+---
