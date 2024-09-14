@@ -23,7 +23,7 @@ Probability theory is the mathematical framework for quantifying uncertainty and
      $$ P(B) = \sum_{i} P(B|A_i) P(A_i) $.
 
 5. **Independence**
-   - **Events** $$ A $$ and $$ B $$ are independent if:
+   - **Events** A and B are independent if:
      $$ P(A \cap B) = P(A) P(B) $$.
 
 ## Random Variables and Distributions
