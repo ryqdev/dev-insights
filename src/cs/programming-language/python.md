@@ -1,196 +1,138 @@
-# Python
+# Essential Python Programming Guide: Conventions, Data Structures, OOP, and Best Practices
 
-## Name Conversion in PEP8
+## Naming Conventions in PEP8
 
-There are only 3 types in Python:
-- lower_underscore = 0
-- UPPER_UNDERSCORE = 1 
-- CamelCase = 2
+Python follows specific naming conventions as outlined in PEP8. There are three main types:
 
-## UPPER_UNDERSCORE
-const variables
+1. **`lower_underscore`**: Used for variables, functions, and modules.
+2. **`UPPER_UNDERSCORE`**: Used for constants.
+3. **`CamelCase`**: Used for class definitions.
 
-## CamelCase
-Class definition
+### 1. `lower_underscore`
+- Applied to most identifiers: variables, functions, modules.
 
-## lower_underscore
-Others, including variables, functions, modules
+### 2. `UPPER_UNDERSCORE`
+- Used for constants, which should not change after initialization.
 
+### 3. `CamelCase`
+- Used for naming classes.
 
-## Prefix Underscore
-### prefix with one underscore
-To hint the variable is private, and it is `weak private`
+## Underscore Prefix in Python
 
-### prefix with two underscore
-`strong private` 
+Python uses underscore prefixes to indicate the visibility of variables and methods.
 
-## Typed Python
-If the function has no return, using -> None in return is recommended
+### 1. Single Underscore (`_var`)
+- Indicates a "weak private" variable. It’s a hint to the programmer not to use it outside of the class or module.
+
+### 2. Double Underscore (`__var`)
+- Indicates a "strong private" variable, name-mangled to prevent conflicts in subclasses.
+
+## Type Annotations in Python
+
+Using type hints improves code readability and helps with error detection.
+
+- If a function does not return a value, use `-> None`:
 
 ```python
 def foo() -> None:
-	print("hello")
-
+    print("hello")
 ```
 
-For error handling functions, use NoReturn
+- For error-handling functions that never return, use `NoReturn`:
+
 ```python
+from typing import NoReturn
+
 def error() -> NoReturn:
-	raise ValueError
+    raise ValueError("An error occurred")
 ```
 
-## python list slice
+## Python List Slicing
 
-#### Some Cases:
+Python supports slicing for accessing elements in sequences like lists, strings, and tuples.
 
-As for 2-d list, such as matrix:
+Given a 2D array (matrix) using NumPy:
 
 ```python
 import numpy as np
-a=np.arange(9).reshape(3,3)
+a = np.arange(9).reshape(3, 3)
 ```
 
-a :
+`a` will look like:
 
 ```python
 array([[0, 1, 2],
-       [3, 4, 5],
-       [6, 7, 8]])
+       [3, 4, 5],
+       [6, 7, 8]])
 ```
 
-a\[1]:
+Some slicing examples:
+
+- `a[1]`: Returns the second row `[3, 4, 5]`.
+- `a[1, :]`: Returns the entire second row `[3, 4, 5]`.
+- `a[1, 2]`: Returns the element `5`.
+- `a[:, 1]`: Returns the second column `[1, 4, 7]`.
+- `a[1:, 1]`: Returns sub-array starting from the second row `[4, 7]`.
+- `a[:2, 1]`: Returns sub-array containing first two rows `[1, 4]`.
+- `a[:, 0:2]`: Returns all rows for the first two columns.
+
+## Data Structures in Python
+
+### 1. Stack
+
+Stacks can be implemented using lists:
 
 ```python
-array([3, 4, 5])
-```
-
-a\[1,:]:
-
-```python
-array([3, 4, 5])
-```
-
-a\[1,2]:
-
-```
-5
-```
-
-a\[:,1]:
-
-```python
-array([1, 4, 7])
-```
-
-a\[1:,1]:
-
-```python
-array([4, 7])
-```
-
-a\[:2,1]:
-
-```python
-array([1, 4])
-```
-
-a\[:,0:2];
-
-```python
-array([[0, 1],
-       [3, 4],
-       [6, 7]])
-```
-
-## Data Structure in Python
-
-### Stack
-
-Using lists as stacks
-
-```python
-stack = [1,2,3,4,5]
-print("Init:", stack)
+stack = [1, 2, 3, 4, 5]
 stack.append(6)
-print("After push:", stack)
 stack.pop()
-stack.pop()
-print("After pop:", stack)
 ```
 
-### Queue
+### 2. Queue
 
-Though lists can be used to implement queue, it is slow when insert or remove the element at the front of queue. Therefore, `collections.deque` is recommended.
+Queues are better implemented using `collections.deque` for efficient operations:
 
 ```python
 from collections import deque
-queue = deque([1,2,3,4,5])
-print("Init:", queue)
+
+queue = deque([1, 2, 3, 4, 5])
 queue.append(6)
-print("Insert at the tail:", queue)
-queue.appendleft(-1)
-print("Insert at the head:", queue)
-queue.pop()
-print("Remove at the tail:", queue)
 queue.popleft()
-print("Remove at the head:", queue)
 ```
 
-### Set
+### 3. Set
 
-Python originally includes a data type for `sets`.
+Python has a built-in `set` type:
 
 ```python
-mySet = {1,2,3,4,1,2}
-print(mySet)
-mySet.add(7)
-print(9 in mySet)
+my_set = {1, 2, 3, 4, 1, 2}
+my_set.add(7)
+print(9 in my_set)
 ```
 
-### Map
+### 4. Map (Dictionary)
 
-Similiar with set, Python uses `dictionary` to implement map.
+Dictionaries in Python are used as maps:
 
 ```python
-myMap = {'a':1, 'b':2, 'c': 3}
-print(myMap)
-# {'a': 1, 'b': 2, 'c': 3}
-del myMap['a']
-print(myMap)
-# {'b': 2, 'c': 3}
+my_map = {'a': 1, 'b': 2, 'c': 3}
+del my_map['a']
 ```
 
-### Linked List
+### 5. Linked List
 
-Like C++, linked list should be defined first.
+Linked lists need to be implemented manually:
 
 ```python
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
-    # this function is for printing
-    def __str__(self):
-        return str(self.val)
-
-# create nodes
-head = ListNode(0)
-node1 = ListNode(1)
-node2 = ListNode(2)
-node3 = ListNode(3)
-
-# link nodes
-head.next = node1
-node1.next = node2
-node2.next = node3
-
-# print
-while head:
-    print(head)
-    head = head.next
 ```
 
-### Tree
+### 6. Tree
+
+Tree nodes can be defined similarly:
 
 ```python
 class TreeNode:
@@ -198,184 +140,91 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
-    def __str__(self):
-        return str(self.val)
-
-root = TreeNode('root')
-node1 = TreeNode(1)
-node2 = TreeNode(2)
-root.left = node1
-node1.right = node2
-
-print(root.left.right)
 ```
 
-### Priority Queue (Heap)
+### 7. Priority Queue (Heap)
+
+Heaps are available via `heapq`:
 
 ```python
-from headq import heappush, heappop
-myHeap = []
-heappush(myHeap, (10,'A'))
-heappush(myHeap, (2,'B'))
-heappush(myHeap, (7,'C'))
-print(myHeap)
-heappop()
-print(myHeap)
+from heapq import heappush, heappop
 
-#output
-# [(2, 'B'), (10, 'A'), (7, 'C')]
-# [(7, 'C'), (10, 'A')]
+heap = []
+heappush(heap, (10, 'A'))
+heappush(heap, (2, 'B'))
+heappop(heap)
 ```
 
-## `__name__` in python
+## `__name__` and Module Execution in Python
 
-```python
-# in foo.py
-def foo():
-    print("in foo")
-    print(__name__)
+Python uses the `__name__` variable to determine if the module is being run directly or imported:
 
-if __name__ == "__main__":
-    foo()
+- `foo.py`:
 
-# output:
-# in foo
-# __main__
-```
+    ```python
+    def foo():
+        print("in foo")
+        print(__name__)
 
-```python
-# in bar.py
-from foo import foo
+    if __name__ == "__main__":
+        foo()
+    ```
 
-def bar():
-    print("in bar")
-    print(__name__)
+- `bar.py`:
 
-if __name__ == "__main__":
-    foo()
-    bar()
+    ```python
+    from foo import foo
 
-# output:
-#in foo
-#foo
-#in bar
-#__main__
-```
+    def bar():
+        print("in bar")
+        print(__name__)
+
+    if __name__ == "__main__":
+        foo()
+        bar()
+    ```
 
 ## Object-Oriented Programming in Python
 
-### Class Definition
+### Class Definition and Instantiation
 
 ```python
 class MyClass:
     foo = 11
-    def bar(self):
-        return 'hello object'
-```
 
-`MyClass.foo` and `MyClass.bar` are valid attribute references, returning an **integer** and a **function** object, respectively
-
-#### Class instantiation
-
-```python
-class MyClass:
-    foo = 11
     def bar(self):
         return 'hello object'
 
-instant = MyClass()
-instant.bar() # call bar function
-```
-
-However, Many classes like to create objects with instances customized to a specific initial state. Therefore a class may define a special method named [`__init__()`](https://docs.python.org/3/reference/datamodel.html#object.\_\_init\_\_), like this:
-
-```python
-class MyClass:
-    foo = 11
-    def __init__(self, a, b):
-      self.foo1 = a
-      self.foo2 = b
-    def bar(self):
-        return 'hello object'
-
-instant = MyClass(2,4)
-print(instant.foo1, instant.foo2) #2 4
+instance = MyClass()
+instance.bar()
 ```
 
 ### Class and Instance Variables
 
-Class variable shared by all instances
+Class variables are shared among all instances, while instance variables are unique to each instance:
 
 ```python
 class MyClass:
     addMe = 1
+
     def __init__(self, a, b):
-      self.foo1 = a
-      self.foo2 = b
-    def bar(self):
-        return 'hello object'
-    def add(self,x):
-      self.addMe += x
-
-a = MyClass(2,4)
-b = MyClass(3,6)
-print(a.addMe)
-a.add(2)
-print(a.addMe)
-b.add(3)
-print(a.addMe)
-print(b.addMe)
-
-#1
-#3
-#3
-#4
+        self.foo1 = a
+        self.foo2 = b
 ```
 
-But sometimes it may lead to mistakes.(why)
+## Debugging Python
 
-```python
-class MyClass:
-    addMe = []
-    def __init__(self, a, b):
-      self.foo1 = a
-      self.foo2 = b
-    def bar(self):
-        return 'hello object'
-    def add(self,x):
-      self.addMe.append(x)
+### Command Line
 
-a = MyClass(2,4)
-b = MyClass(3,6)
-print(a.addMe)
-a.add(2)
-print(a.addMe)
-b.add(3)
-print(a.addMe)
+Use `ipdb` for debugging:
 
-#[]
-#[2]
-#[2, 3]hon
+```bash
+python -m ipdb [file_name]
 ```
 
-### Reference
+### Visual Studio Code
 
-[9. Classes](https://docs.python.org/3/tutorial/classes.html)
-
-## Debug Python
-
-### Approach 1 (Command Line)
-
-Like gdb interface.
-
-```python
-# remember to pip install ipdb before
-python -m ipdb [file name]
-```
-
-### Approach 2 (VsCode)
-
-In `launch.json` file:
+Configure `launch.json` for debugging:
 
 ```json
 {
@@ -386,191 +235,75 @@ In `launch.json` file:
             "type": "python",
             "request": "launch",
             "program": "${file}",
-            "console": "integratedTerminal",
-            "args": [
-                "-a", "arg1",
-                "-b" ,"arg2",
-                "-c", "arg3"
-            ]
+            "console": "integratedTerminal"
         }
     ]
 }
 ```
 
-## for loop optimize in python
+## Performance Optimization
 
-In general, list loop (I don't know the exact name of that method :P ) performs better than traditional way.
-
-e.g
+List comprehensions are faster than traditional loops:
 
 ```python
-import time
-len = 10000000
-start_time = time.time()
-
-# method 1
+# Method 1
 res = []
-for i in range(len):
+for i in range(1000000):
     if i % 2 == 0:
         res.append(i)
 
-checkPoint= time.time()
-print("Execute: %s seconds" % (checkPoint - start_time))
-
-# method 2
-res = [x for x in range(len) if x % 2 == 0]
-
-Terminate = time.time()
-print("Execute: %s seconds" % (Terminate - checkPoint))
-
-# output:
-# Execute: 1.291942834854126 seconds
-# Execute: 0.8715779781341553 seconds
+# Method 2 (Faster)
+res = [x for x in range(1000000) if x % 2 == 0]
 ```
 
-List loop (method 2) is fast due to parallel computing.
+## String Methods: `join` and `split`
 
-## join and split method in python
-
-### split
+### `split`
 
 ```python
-import datetime
-date = str(datetime.date.today())
-print(date)
-#2021-10-05
-date = date.split('-')
-print(date)
-#['2021', '10', '05']
+date = "2021-10-05".split('-')
 ```
 
-### join
+### `join`
 
 ```python
-date = ['2021', '10', '05']
-date = '/'.join(date)
-print(date)
-#2021/10/05
+date = '/'.join(['2021', '10', '05'])
 ```
 
-### Combine together
+## Argument Parsing in Python
+
+Use `argparse` for more robust argument parsing in scripts:
 
 ```python
-import datetime
-date = ''.join(str(datetime.date.today()).split('-'))
-print(date)
-#20211005
-```
+import argparse
 
-## python args
-
-One of the useful ways to get the command line arguments for python is to use `parser`.
-
-```python
-from optparse import OptionParser
 if __name__ == '__main__':
-    parser = OptionParser()
-    parser.add_option("-p", dest="morning", action="store_true", default=False)
-    parser.add_option("-a", dest="afternoon", action="store_true", default=False)
-    parser.add_option("-e", dest="evening", action="store_true", default=False)
-    options = parser.defaults
-    book = Booker(options['morning'], options['afternoon'], options['evening'])
-    book.start()
+    parser = argparse.ArgumentParser(description="A simple parser.")
+    parser.add_argument("-p", "--morning", action="store_true")
+    args = parser.parse_args()
 ```
 
-## python copy list
+## Copying Lists in Python
 
-When you want to create a new list based on an existing list, there are many situations
+Python supports several methods to copy lists:
 
-### Assignment
+- **Assignment**: `new_list = old_list`
+- **Shallow Copy**: `new_list = old_list.copy()`
+- **Deep Copy**: `new_list = copy.deepcopy(old_list)`
+- **Slicing**: `new_list = old_list[:]`
 
-```python
-oldList = [1,2,3,4,5]
-newList = oldList
-oldList.append(6)
-print(oldList)
-print(newList)
-newList.append(7)
-print(oldList)
-print(newList)
-```
+## Multiprocessing in Python
 
-### Copy
-
-The copy() method only implements the deep copy of the first level, i.e., if there is a list in the list, the internal list will be assigned rather than copied.
+For parallel processing, use the `multiprocessing` module:
 
 ```python
-oldList = [1,2,[3,4],[5,6]]
-newList = oldList.copy()
-print(oldList)
-print(newList)
-oldList.append(7)
-print(oldList)
-print(newList)
-newList.append(18)
-print(oldList)
-print(newList)
-oldList[2].append(188)
-print(oldList)
-print(newList)
-```
-
-### Deep copy
-
-Everything is copied
-
-```python
-import copy
-oldList = [1,2,[3,4],[5,6]]
-newList = copy.deepcopy(oldList)
-oldList.append(7)
-print(oldList)
-print(newList)
-newList.append(18)
-print(oldList)
-print(newList)
-oldList[2].append(188)
-print(oldList)
-print(newList)
-```
-
-### Slice
-
-the same with `copy()` method
-
-```python
-import copy
-oldList = [1,2,[3,4],[5,6]]
-newList = oldList[:]
-# omitted
-```
-
-### Initializaiton with for loop
-
-the same with `copy()` method
-
-```python
-import copy
-oldList = [1,2,[3,4],[5,6]]
-newList = [i for i in oldList]
-# omitted
-```
-
-## Multiprocess in Python
-
-```python
-import os
 import multiprocessing
 
-def foo(i):
-    print("arg: ", i)
-    print("Hi this is ", multiprocessing.current_process().name)
-    print('module name:', __name__)
-    print('parent process id:', os.getppid())
-    print('current process id:', os.getpid())
-    print('------------------------')
+def worker(i):
+    print(f"Worker {i} is running")
+
 if __name__ == '__main__':
     for i in range(3):
-        p = multiprocessing.Process(target=foo, args=(i,))
+        p = multiprocessing.Process(target=worker, args=(i,))
         p.start()
 ```
