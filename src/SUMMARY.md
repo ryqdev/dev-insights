@@ -34,7 +34,7 @@
         - [CICD Pipeline](./cs/dev-tools/aws-github-actions.md)
         - [Kubernetes](./cs/dev-tools/k8s.md)
         - [Prometheus](./cs/dev-tools/prometheus.md)
-        - [Remove Development](./cs/dev-tools/remote-dev.md)
+        - [Remote Development](./cs/dev-tools/remote-dev.md)
         - [Makefile](./cs/dev-tools/makefile.md)
     - [System Design](./cs/system-design/system.md)
         - [Distributed System](./cs/system-design/distributed.md)
