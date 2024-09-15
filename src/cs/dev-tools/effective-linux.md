@@ -137,6 +137,11 @@ lsb_release -a
 grep -r --include=*.go "<text>"
 ```
 
+### 1.10 file size 
+```shell
+du --max-depth=1 | sort -n | cut -f2 | xargs du --max-depth=0 -h
+```
+
 ## 2. Shell Scripting
 
 ### 2.1 Variables

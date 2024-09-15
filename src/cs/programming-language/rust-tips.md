@@ -125,6 +125,17 @@ fn main() {
 
 ## Variable Types in Rust
 
+### Print Variable Type in Rust
+```rust
+fn type_of<T>(_: T) -> &'static str {
+    std::any::type_name::<T>()
+}
+
+// or 
+
+std::mem::size_of::<usize>()
+```
+
 ### Mutable and Immutable Variables
 
 Variables in Rust are immutable by default. To make a variable mutable, use the `mut` keyword:
