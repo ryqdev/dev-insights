@@ -23,3 +23,6 @@ Beta is the volatility of a security or portfolio against its benchmark index.
 ## Financial Terminology
 ### Speculation
 Assumption of unusual business risk in hopes of obtaining commensurate gain
+
+## Appendix
+https://www.youtube.com/watch?v=PHe0bXAIuk0&t=3s&ab_channel=PrinciplesbyRayDalio
