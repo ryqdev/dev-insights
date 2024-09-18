@@ -288,6 +288,11 @@ default:
 ```
 
 ## Advanced Topics
+### Assembly Go
+Print the Assembly code for Golang
+```shell
+go tool compile -N -l -S main.go
+```
 
 ### Reflection
 
