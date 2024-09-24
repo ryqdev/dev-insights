@@ -8,21 +8,27 @@ Operating systems (OS) are software that manage computer hardware and software r
 ##### Memory Layout
 ```shell
 |-------------------------------|  Highest Memory Address
-|           Stack                |  
-|  (Grows Downwards)             |  
+|           Stack               |  
+|  (Grows Downwards)            |  <-- Grows downwards
+| Local variables,              |
+| Function calls                |
 |-------------------------------|  
-|           Unused Space         | 
+|           Unused Space        | 
 |-------------------------------|
-|           Heap                 |
-|  (Dynamically Grows Upwards)   |
+|           Heap                |
+|  (Dynamically Grows Upwards)  |
+| Dynamically allocated         |  <-- Grows upwards 
+| memory (e.g., malloc,         |
+| new in C, Box in Rust)        |
 |-------------------------------|  
-|      Uninitialized Data (BSS)  |
+|      Uninitialized Data (BSS) |  <-- Uninitialized global/static variables
 |-------------------------------|
-|      Initialized Data          |   
+|      Initialized Data         |  <-- Initialized global/static variables
 |-------------------------------|
-|       Text (Code) Segment      |
-|  (Executable Code - Read Only) |
+|       Text (Code) Segment     |  <-- Stores program code (machine instructions)
+|  (Executable Code - Read Only)|
 |-------------------------------|  Lowest Memory Address (0x0000)
+
 ```
 ##### Stack 
 
