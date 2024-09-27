@@ -16,6 +16,25 @@ go mod init <module path>
 
 This command initializes a new Go module in the current directory and creates a `go.mod` file.
 
+
+### Understanding `go mod why`
+
+The `go mod why` command helps you understand why a particular module is included in your build. It shows the import path from your code to the module in question.
+
+To use it, run:
+
+```shell
+go mod why <module>
+```
+
+For example, to find out why the `golang.org/x/text` module is included:
+
+```shell
+go mod why golang.org/x/text
+```
+
+This command will output the chain of imports that led to the inclusion of the specified module.
+
 ### Basic Structure of a Go Program
 
 Every Go program is composed of packages. The `main` package is the entry point of any executable program.
