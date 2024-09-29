@@ -269,6 +269,32 @@ scores.insert(String::from("Blue"), 10);
 scores.insert(String::from("Yellow"), 50);
 ```
 
+## Project Organization
+### Comparison of **Package**, **Crate**, and **Module**
+
+| **Concept**  | **Description**                                                                                                                                                                                                                                      |
+|--------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Package**  | A **package** is a bundle that contains one or more **crates**. It is defined by a **`Cargo.toml` file** and managed by Cargo. A package must contain at least one crate.                                                                               |
+| **Crate**    | A **crate** is the smallest **compilable unit** in Rust. It can either be a **binary crate** (which produces an executable) or a **library crate** (which produces reusable code). A package can have multiple binary crates and at most one library crate. |
+| **Module**   | A **module** is a way to **organize and group code** within a crate. It is defined with the `mod` keyword and can be inline in the same file or split into separate files. Modules allow you to control visibility and structure code inside a crate.     |
+
+
+e.g.:
+```shell
+my_project/
+├── Cargo.toml                 # Defines the package (the project metadata)
+└── src/
+    ├── lib.rs                 # Library crate root (contains modules)
+    ├── main.rs                # Binary crate root (the executable)
+    ├── utils.rs               # A module used in the library crate
+    ├── math/                  # A directory containing modules
+    │   ├── mod.rs             # Root of the `math` module
+    │   └── operations.rs      # A submodule of `math`
+    └── services/
+        ├── mod.rs             # Root of the `services` module
+        └── network.rs         # A submodule of `services`
+```
+
 ## Conclusion
 
 This collection captures fundamental Rust programming concepts, from basic syntax and data types to more advanced topics like ownership and collections. Rust's safety guarantees and powerful abstractions make it a compelling choice for systems programming.
