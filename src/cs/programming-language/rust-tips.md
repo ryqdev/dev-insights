@@ -1,4 +1,4 @@
-# Rust Notes: A Developer's Collection of Rust Insights and Practices
+ng# Rust Notes: A Developer's Collection of Rust Insights and Practices
 
 ## Introduction to Rust
 
@@ -269,6 +269,10 @@ scores.insert(String::from("Blue"), 10);
 scores.insert(String::from("Yellow"), 50);
 ```
 
+## Debugging
+To get more information about the error, you can run your program with the `RUST_BACKTRACE=1` environment variable, as suggested by the error message. This will display a backtrace that can help you understand the sequence of events leading up to the error.
+
+
 ## Project Organization
 ### Comparison of **Package**, **Crate**, and **Module**
 
@@ -295,9 +299,6 @@ my_project/
         └── network.rs         # A submodule of `services`
 ```
 
-## Conclusion
-
-This collection captures fundamental Rust programming concepts, from basic syntax and data types to more advanced topics like ownership and collections. Rust's safety guarantees and powerful abstractions make it a compelling choice for systems programming.
 
 ## References
 
