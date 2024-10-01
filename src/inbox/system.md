@@ -37,6 +37,48 @@ Operating systems (OS) are software that manage computer hardware and software r
 ##### Special Scenarios
 Closure
 
+#### Examples
+
+```c
+#include <stdlib.h>
+#include <stdio.h>
+
+int main() {
+    int *p1 = malloc(sizeof(int));
+
+    *p1 = 42;
+
+    int *p2 = p1;
+
+    return 0;
+}
+```
+
+The variable p1 itself is stored on the stack.
+
+In the line int *p1 = malloc(sizeof(int));, p1 is a pointer variable that is declared on the stack. The malloc function allocates memory on the heap and returns a pointer to that memory location, which is then assigned to p1.
+
+```shell
++---------------+
+|  Stack  |
++---------------+
+|  p1 (pointer)  |  Address: 0x7fffcf401230
+|  (4 bytes)     |
++---------------+
+|  p2 (pointer)  |  Address: 0x7fffcf401234
+|  (4 bytes)     |
++---------------+
+
+
+
++---------------+
+|  Heap  |
++---------------+
+|  Integer value  |
+|  (42)          |
++---------------+
+```
+
 
 ## Distributed Systems
 Distributed systems consist of multiple autonomous computers that communicate through a network. They work together to achieve a common goal and provide benefits such as resource sharing, scalability, and fault tolerance.
