@@ -64,6 +64,47 @@ std::cout << closure_func();  // Outputs 10
 
 In this example, the variable `x` is captured by the lambda expression, and its value persists even after `outer_function` has returned.
 
+#### 4. Rust
+```rust
+use std::thread;
+
+fn main() {
+    let v = vec![1, 2, 3];
+
+    let handle = thread::spawn(move || {
+        println!("Here's a vector: {v:?}");
+    });
+
+    handle.join().unwrap();
+}
+```
+Rust compiler will check wether the closure get the ownership of environment variables or not. In this case, the closure takes ownership of `v` and moves it to the heap.
+
+#### 5. Golang
+
+The potencial bug:
+```go
+package main
+
+import (
+	"sync"
+	"time"
+)
+
+func main() {
+	var wg sync.WaitGroup
+	wg.Add(1)
+	s := "gopher"
+	go func() {
+		defer wg.Done()
+		time.Sleep(1)
+		println(s)
+	}()
+	s = "hello"
+	wg.Wait()
+}
+```
+
 ### How It Works Under the Hood:
 
 1. **Stack vs. Heap**: 
