@@ -272,6 +272,10 @@ scores.insert(String::from("Yellow"), 50);
 ## Debugging
 To get more information about the error, you can run your program with the `RUST_BACKTRACE=1` environment variable, as suggested by the error message. This will display a backtrace that can help you understand the sequence of events leading up to the error.
 
+## Concurrency
+### Send and Sync Trait
+- Send allows types to be moved between threads.
+- Sync allows types to be shared between threads via immutable references.
 
 ## Project Organization
 ### Comparison of **Package**, **Crate**, and **Module**
