@@ -191,7 +191,7 @@ vector<int> v3(10, 1); // v3 has ten elements with value 1
 vector<int> v4{10, 1}; // v4 has two elements with values 10 and 1
 ```
 
-## Chapter 4 Expressions
+## Chapter 3 Expressions
 
 **Implicit Conversions**
 
@@ -301,7 +301,7 @@ type (expr); // function-style cast notation
 
 ![](https://raw.githubusercontent.com/Yukun4119/BlogImg/main/img/20221115165523.png)
 
-## Chapter 5: Algorithms
+## Chapter 4: Algorithms
 
 ## Sorting
 ```cpp
@@ -526,7 +526,7 @@ int hamilton(int n, int weight[20][20]) {++
 }
 ```
 
-## Chapter 6: Data Structures
+## Chapter 5: Data Structures
 ### Union and Find
 ```cpp
 int find(int x) {

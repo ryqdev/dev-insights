@@ -303,6 +303,9 @@ my_project/
         └── network.rs         # A submodule of `services`
 ```
 
+## Famous Rust Projects
+- [rip](https://github.com/nivekuil/rip)
+
 
 ## References
 

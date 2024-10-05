@@ -1,13 +1,6 @@
 There are two kinds of people in this world: Those seeking happiness, and bullfighters.
 
-
-My bookcase:
-# Command Line Tools
-- [rip](https://github.com/nivekuil/rip)
-
-# AI Tool
-- [llamafile](https://github.com/Mozilla-Ocho/llamafile)
-- [anything-llm](https://github.com/Mintplex-Labs/anything-llm)
+A list of popular programming languages and tools:
 
 # Python
 - [yt-fts](https://github.com/NotJoeMartinez/yt-fts)

@@ -11,3 +11,5 @@ https://github.com/rasbt/LLMs-from-scratch
 - [llm-viz](https://github.com/bbycroft/llm-viz)
 - [Andrej Karpathy](https://www.youtube.com/@AndrejKarpathy)
 - [LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch)
+- [llamafile](https://github.com/Mozilla-Ocho/llamafile)
+- [anything-llm](https://github.com/Mintplex-Labs/anything-llm)

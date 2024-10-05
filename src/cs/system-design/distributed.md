@@ -1,5 +1,7 @@
 # Distribyted System
 
+This document is the course notes from COMP7305 in HKU.
+
 ## Hadoop
 
 ### What is Hadoop

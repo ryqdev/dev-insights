@@ -1,4 +1,7 @@
-# Essential Python Programming Guide: Conventions, Data Structures, OOP, and Best Practices
+# Essential Python Programming Guide: Conventions, Data Structures, OOP
+
+## How to learn Python from beginner to advanced
+[Python-100-Days](https://github.com/jackfrued/Python-100-Days)
 
 ## Naming Conventions in PEP8
 
