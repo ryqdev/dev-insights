@@ -1,2 +1,0 @@
-imperative programming
-declarative programming

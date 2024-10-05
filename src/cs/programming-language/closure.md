@@ -114,13 +114,3 @@ func main() {
 2. **Runtime Management**:
    - In languages like Python and JavaScript, the runtime manages the memory for captured variables by storing them in the heap and ensuring they persist as long as the closure is in use.
    - In lower-level languages like C++, memory management for closures can be more explicit, but the same principle applies: the captured variables are stored in the heap to ensure they remain accessible.
-
-### Summary:
-- **Normal local variables** are stored on the **stack**.
-- **Captured variables in a closure** are stored on the **heap** so that they can persist after the outer function returns.
-- The closure maintains a reference to these variables, ensuring they remain accessible.
-
-Would you like to see more about how garbage collection or memory management works in languages like Python or JavaScript?
-
-**a.** Would you like a deeper dive into garbage collection and closures?
-**b.** Shall we look at how C++ handles closures in more detail with specific memory management techniques?

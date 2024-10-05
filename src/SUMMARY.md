@@ -20,6 +20,7 @@
         - [Lua](./cs/programming-language/lua.md)
         - [Pointers](./cs/programming-language/pointers.md)
         - [Async](./cs/programming-language/async.md)
+        - [Closure](./cs/programming-language/closure.md)
     - [Developing Tools](./cs/dev-tools/dev.md)
         - [Git](./cs/dev-tools/git-tips.md)
         - [SSH](./cs/dev-tools/ssh-tips.md)
@@ -39,6 +40,8 @@
     - [System Design](./cs/system-design/system.md)
         - [Distributed System](./cs/system-design/distributed.md)
         - [Linux System](./cs/system-design/linux-system.md)
+        - [Microservices](./cs/system-design/microservices.md)
+    - [Block Chain](./cs/block-chain/block-chain.md)
 
 - [Finance](./finance/finance.md)
     - [Financial knowledge](./finance/financial-knowledge.md)

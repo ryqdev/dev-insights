@@ -24,6 +24,11 @@ Beta is the volatility of a security or portfolio against its benchmark index.
 ### Speculation
 Assumption of unusual business risk in hopes of obtaining commensurate gain
 
+## Bonds
+### Effective Duration
+TODO
+
+
 ## Options
 My learning experience with options, the contracts giving the owner the right to buy or sell an asset at strike price
 
