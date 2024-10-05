@@ -1,4 +1,4 @@
-# Mastering Comuter Systems
+# Mastering Linux System
 
 ## 1 Operating Systems
 Operating systems (OS) are software that manage computer hardware and software resources and provide common services for computer programs. Examples include Windows, macOS, and Linux.

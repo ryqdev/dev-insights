@@ -1,4 +1,4 @@
-# Lua
+# Lua Basic
 ```lua
 -- Two dashes start a one-line comment.
 

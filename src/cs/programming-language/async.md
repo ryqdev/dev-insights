@@ -1,5 +1,9 @@
 # Async
 
+Asynchronous programming is a programming paradigm that allows a program to perform multiple tasks concurrently without blocking the program's execution.
+
+Below is an example of asynchronous programming in different languages:
+
 ## Rust
 
 Synchronous version:

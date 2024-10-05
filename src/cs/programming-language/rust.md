@@ -1,4 +1,4 @@
-ng# Rust Notes: A Developer's Collection of Rust Insights and Practices
+# Rust Notes: A Developer's Collection of Rust Insights and Practices
 
 ## Introduction to Rust
 
