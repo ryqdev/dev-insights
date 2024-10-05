@@ -2,4 +2,5 @@
 
 TODO
 
-[numpy-ml](https://github.com/ddbourgin/numpy-ml)
+## Resources
+- [numpy-ml](https://github.com/ddbourgin/numpy-ml)

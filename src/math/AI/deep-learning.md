@@ -1,7 +1,9 @@
-# Deep Learning with PyTorch
+# Deep Learning
+
+## Deep Learning Basics
 TODO
 
-## Pytorch example code
+## Train with PyTorch
 
 ```python
 import torch
