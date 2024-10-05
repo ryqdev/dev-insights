@@ -1,5 +1,7 @@
 # Pointers
 
+Pointers are the very powerful tools in programming. Here are the examples of pointers in different programming languages.
+
 ## Raw Pointers
 
 ### Pointers in Golang
