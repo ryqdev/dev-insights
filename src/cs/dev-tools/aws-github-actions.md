@@ -201,3 +201,4 @@ Get the Public IPv4 DNS from AWS console: `ec2-13-60-74-205.eu-north-1.compute.a
 
 
 If you cannot access the server, check if you enable the http port to all ips in `Security Group`
+<img width="1666" alt="image" src="https://github.com/user-attachments/assets/ccf8068c-1f3b-4d96-80bf-1784f472b59e">
