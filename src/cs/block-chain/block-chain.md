@@ -1,5 +1,12 @@
 # Block Chain
 
+## Introduction
+Blockchain can be thought of as a decentralized network of computers (or nodes) working together like a giant, distributed machine. Here’s how it works:
+- Spending Tokens: To use these resources—whether for data storage or running programs—users must pay with tokens.
+- Earning Tokens: In return, the nodes that contribute resources (computing power or storage) are rewarded with tokens.
+- Trading Tokens: These tokens can be bought, sold, or traded on exchanges, similar to stocks or other assets.
+
+## EVM
 EVM block example:
 
 ```shell

@@ -1,4 +1,4 @@
 # Trading System
 TODO
 
-https://github.com/quantopian/research_public
+[research_public](https://github.com/quantopian/research_public)

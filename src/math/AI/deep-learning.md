@@ -3,7 +3,7 @@
 ## Deep Learning Basics
 TODO
 
-## Train with PyTorch
+## Training with PyTorch
 
 ```python
 import torch
