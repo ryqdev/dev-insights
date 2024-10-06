@@ -39,7 +39,6 @@
         - [Makefile](./cs/dev-tools/makefile.md)
     - [System Design](./cs/system-design/system.md)
         - [Distributed System](./cs/system-design/distributed.md)
-        - [Linux System](./cs/system-design/linux-system.md)
         - [Microservices](./cs/system-design/microservices.md)
     - [Block Chain](./cs/block-chain/block-chain.md)
 
