@@ -14,6 +14,16 @@ RUN go build -o main src/main.go
 CMD ["./main"]
 ```
 
+## Build Docker Image
+```shell
+docker build -t ryqdev/xxxxx .
+```
+
+## Run Docker Image
+```shell
+docker run -d -p 8080:8080 --name cicd-pipeline-container ryqdev/xxxxx
+```
+
 ## Build CI Pipeline
 Under `.github/workflows` directory, add the ci file:
 ```yaml
