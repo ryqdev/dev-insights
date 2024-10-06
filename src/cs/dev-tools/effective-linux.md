@@ -2,7 +2,7 @@
 
 ## 1. Essential Linux Commands
 
-### 1.1 `fd` - A Fast and User-Friendly File Search Tool
+### 1.1 `fd`
 
 `fd` is a modern alternative to the `find` command. It provides a simpler syntax, faster performance, and a more intuitive output.
 
@@ -25,7 +25,7 @@ fd <pattern> --exclude dir1 --exclude dir2
 fd <pattern> --type f
 ```
 
-### 1.2 `ripgrep` - A Fast Search Tool for Code and Text
+### 1.2 `ripgrep`
 
 `ripgrep` (`rg`) is a line-oriented search tool that recursively searches for regex patterns in the current directory or specified files. It is a faster alternative to `grep`.
 
@@ -48,7 +48,7 @@ rg -i <pattern>
 rg <pattern> --no-ignore
 ```
 
-### 1.3 `curl` - Transfer Data from URLs
+### 1.3 `curl`
 
 `curl` is a command-line tool for transferring data with URL syntax, supporting a variety of protocols.
 
@@ -74,7 +74,7 @@ curl -L http://www.example.com
 curl -w "%{http_code}\n" -o /dev/null -s https://www.example.com
 ```
 
-### 1.4 `wc` - Word Count
+### 1.4 `wc`
 
 `wc` is used to count lines, words, and characters in files.
 
@@ -84,7 +84,7 @@ curl -w "%{http_code}\n" -o /dev/null -s https://www.example.com
 wc -l <file_name>  # Count lines in a file
 ```
 
-### 1.5 `sed` - Stream Editor
+### 1.5 `sed`
 
 `sed` is used for parsing and transforming text.
 
@@ -97,7 +97,7 @@ echo "a b\nc d" | sed 's/a/aa/g'
 # c d
 ```
 
-### 1.6 `awk` - Pattern-Scanning and Processing Language
+### 1.6 `awk` 
 
 `awk` is a powerful tool for text processing and reporting.
 
@@ -117,7 +117,7 @@ Print real-time logs with timestamps:
 tail -f <log_file_path> | awk '{now=strftime("%F %T%z\t");sub(/^/, now);print}'
 ```
 
-### 1.8 `lsb_release` - Get Distribution Information
+### 1.8 `lsb_release`
 
 `lsb_release` displays Linux distribution information.
 
@@ -127,7 +127,7 @@ tail -f <log_file_path> | awk '{now=strftime("%F %T%z\t");sub(/^/, now);print}'
 lsb_release -a
 ```
 
-### 1.9 `grep` - Search Text Using Patterns
+### 1.9 `grep`
 
 `grep` is a powerful search utility to find specific patterns within files.
 
