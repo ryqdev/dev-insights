@@ -22,7 +22,7 @@
         - [Async](./cs/programming-language/async.md)
         - [Closure](./cs/programming-language/closure.md)
     - [Developing Tools](./cs/dev-tools/dev.md)
-        - [AWS] (./cs/dev-tools/aws.md)
+        - [AWS](./cs/dev-tools/aws.md)
             - [Self-hosted CICD Pipeline](./cs/dev-tools/aws/aws-github-actions.md)
             - [AWS CDK](./cs/dev-tools/aws/aws-cdk.md)
         - [Git](./cs/dev-tools/git-tips.md)
