@@ -1,2 +1,3 @@
 # Payment System
-TODO
+
+## System Architecture
