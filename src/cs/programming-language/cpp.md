@@ -673,6 +673,13 @@ struct segtree {
 };
 ```
 
+## Chapter 6: Effective C++
+### Auto
+The advantage of auto:
+- Avoid the uninitialized variable problem
+- Reduces redundancy in variable declarations
+- More compatible cross the platforms
+
 ## Appendix A
 ### bits-stdc++
 [bits-stdc++.h](https://gist.githubusercontent.com/ryqdev/a9a9d745ece71d50f84630319c9abcca/raw/c2d66814feab32b7d4450c0810cc1622523c0efe/bits-stdc++.h)
