@@ -35,6 +35,12 @@ go mod why golang.org/x/text
 
 This command will output the chain of imports that led to the inclusion of the specified module.
 
+### `go install` vs `go get`
+Starting in Go 1.17, installing executables with go get is deprecated. go install may be used instead.
+- go install: install a command at a version specified on the command line while ignoring the go.mod file in the current directory
+- go get: update dependencies in go.mod
+For more information, access Deprecation of 'go get' for installing executables - The Go Programming Language
+
 ### Basic Structure of a Go Program
 
 Every Go program is composed of packages. The `main` package is the entry point of any executable program.
