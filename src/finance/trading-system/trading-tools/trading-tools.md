@@ -1,0 +1,4 @@
+# Trading Tools
+
+- tradingview
+- cctx
