@@ -27,6 +27,9 @@ Why MQ?
 2. decouple the components, e.g. I can use Python programs as producers and C++ programs as consumers.
 
 
+## Why is single threaded Redis so fast
+https://www.pixelstech.net/article/1677580861-Why-is-single-threaded-Redis-so-fast
+
 Redis subscribe/publish model, MQ
 
 Flask
