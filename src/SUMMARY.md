@@ -15,7 +15,7 @@
     - [Programming Language](./cs/programming-language/programming.md)
         - [Python](./cs/programming-language/python.md)
             - [Python Tips](./cs/programming-language/python/python-tips.md)
-        - [Golang](./cs/programming-language/golang.md)
+        - [Golang](./cs/programming-language/golang/golang.md)
             - [Can u catch the panic](./cs/programming-language/golang/panic.md)
         - [Rust](./cs/programming-language/rust.md)   
         - [Cpp](./cs/programming-language/cpp.md)
