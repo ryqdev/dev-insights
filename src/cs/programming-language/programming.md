@@ -1,6 +1,7 @@
 # My Opinions on various programming languages
 
 When choosing a programming language, the primary goal is to solve problems quickly. The key factors to consider are the language’s strengths and the ecosystem around it.
+![image](https://github.com/user-attachments/assets/ede7461b-9c74-4aa8-a85b-1cab6975877c)
 
 ## Python
 Advantages: 
